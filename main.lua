@@ -44,27 +44,12 @@ function love.keypressed(key)
  
 function love.draw()
 
-   -- local layer = map.layers.ground
-   --    for y = 1, layer.height do
-   --       for x = 1, layer.width do
-   --          local tile = layer.data[y][x]
+   -- for _, hey in ipairs(allSolidTiles) do
+   --    love.graphics.setColor(255, 0, 0)
+   --    hey:draw('fill')
+   -- end   
 
-   --             if tile.id == 0 then
-   --                love.graphics.setColor(255, 0, 0)
-   --             else 
-   --                love.graphics.setColor(255, 255, 0)
-   --             end               
-              
-   --   --          love.graphics.rectangle("fill", (x - 1) * 32, (y - 1) * 32, 32, 32)
-    
-   --       end
-   -- end
-
-   for _, hey in ipairs(allSolidTiles) do
-      love.graphics.setColor(255, 0, 0)
-      hey:draw('fill')
-   end   
-   
+   map:draw()   
    love.graphics.setColor(0, 255, 0)
    
    
